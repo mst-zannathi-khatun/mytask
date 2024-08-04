@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mytask/ui/style/coustom_textstyle.dart';
-import '../widgets/TextFormFieldWidget.dart';
+import '../widgets/textformfieldwidget.dart';
+import '../widgets/textbuttonwidget.dart';
+import 'forgotpassword_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -47,35 +49,25 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(
-              height: 4,
+              height: 6,
             ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "Forgot your password?",
-                style: MyTaskTextStyle.smallTextStyle,
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const ForgotPasswordScreen()));
+              },
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "Forgot your password?",
+                  style: MyTaskTextStyle.smallTextStyle,
+                ),
               ),
             ),
             const SizedBox(
-              height: 40, // Adjusted spacing as needed
+              height: 50, // Adjusted spacing as needed
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  "LOG IN",
-                  style: MyTaskTextStyle.buttonTextStyle,
-                ),
-                const SizedBox(
-                  width: 4,
-                ),
-                Image.asset(
-                  "assets/images/arrow.png",
-                  height: 40,
-                  width: 40,
-                ),
-              ],
+            const TextButtonWidget(
+              text: "LOG IN",
             ),
             const Spacer(),
             Row(
@@ -101,3 +93,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+

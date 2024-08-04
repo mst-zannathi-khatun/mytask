@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mytask/ui/screens/login_screen.dart';
 import '../style/coustom_textstyle.dart';
-import '../widgets/ElevatedButtonWidget.dart';
+import '../widgets/elevatedbuttonwidget.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../style/coustom_colors.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
-  final Icon prefixIcons;
+  final Widget prefixIcons;
   final String hintText;
 
   const TextFormFieldWidget({
