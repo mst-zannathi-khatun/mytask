@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mytask/ui/screens/setnewpassword_screen.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../style/coustom_colors.dart';
 import '../style/coustom_textstyle.dart';
@@ -93,7 +94,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const EmailVerificationScreen()));
+                        builder: (context) => const SetNewPasswordScreen()));
               },
               child: const TextButtonWidget(
                 text: "VERIFY",
