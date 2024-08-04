@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mytask/ui/screens/verificationcode_screen.dart';
 
 import '../style/coustom_colors.dart';
 import '../style/coustom_textstyle.dart';
@@ -55,7 +56,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             style: MyTaskTextStyle.smallTextStyle,
           ),
           const SizedBox(
-            height: 8,
+            height: 16,
           ),
           const TextFormFieldWidget(
             prefixIcons: Icon(Icons.email_rounded),
@@ -64,8 +65,14 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           const SizedBox(
             height: 200,
           ),
-          const TextButtonWidget(
-            text: "SEND",
+          InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> const EmailVerificationScreen()));
+            },
+            child: const TextButtonWidget(
+              text: "SEND",
+
+            ),
           ),
         ],
       ),
