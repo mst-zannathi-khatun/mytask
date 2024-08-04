@@ -3,11 +3,12 @@ import 'package:mytask/ui/screens/splash_screen.dart';
 import 'package:mytask/ui/style/coustom_colors.dart';
 
 void main() {
-  runApp(MyTask());
+  runApp(const MyTask());
 }
 
 class MyTask extends StatelessWidget {
   const MyTask({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,7 +16,7 @@ class MyTask extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: MyTaskThemeColor.primaryColor,
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

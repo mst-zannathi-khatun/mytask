@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mytask/ui/screens/login_screen.dart';
 import '../style/coustom_textstyle.dart';
 import '../widgets/ElevatedButtonWidget.dart';
 
@@ -31,13 +32,18 @@ class SplashScreen extends StatelessWidget {
                 child: Image.asset("assets/images/logo.png")),
           ),
           const SizedBox(
-            height: 120,
+            height: 100,
           ),
           SizedBox(
             height: 50,
             width: double.infinity,
             child: ElevatedButtonWidget(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginScreen()));
+              },
               buttonText: "LOG IN",
             ),
           ),
@@ -49,7 +55,7 @@ class SplashScreen extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButtonWidget(
               onPressed: () {},
-              buttonText: "SINGIN",
+              buttonText: "SING IN",
             ),
           ),
           const SizedBox(
