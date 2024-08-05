@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mytask/ui/screens/login_screen.dart';
+import 'package:mytask/ui/screens/singup_screen.dart';
 import '../style/coustom_textstyle.dart';
 import '../widgets/elevatedbuttonwidget.dart';
 
@@ -54,8 +55,10 @@ class SplashScreen extends StatelessWidget {
             height: 50,
             width: double.infinity,
             child: ElevatedButtonWidget(
-              onPressed: () {},
-              buttonText: "SING IN",
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const SingUpScreen()));
+              },
+              buttonText: "SING UP",
             ),
           ),
           const SizedBox(
