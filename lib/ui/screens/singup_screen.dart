@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mytask/ui/screens/setnewpassword_screen.dart';
-
 import '../style/coustom_textstyle.dart';
 import '../widgets/textbuttonwidget.dart';
 import '../widgets/textformfieldwidget.dart';
+import 'home_screen.dart';
 
 class SingUpScreen extends StatefulWidget {
   const SingUpScreen({super.key});
@@ -81,6 +80,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
             ),
             InkWell(
               onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomeScreen()));
               },
               child: const TextButtonWidget(
                 text: "SIGN UP",

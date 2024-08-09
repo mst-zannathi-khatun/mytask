@@ -26,10 +26,14 @@ class MyTaskTextStyle {
     color: Colors.white,
   );
 
-  static TextStyle buttonCreateText =  TextStyle(
+  static TextStyle buttonCreateText = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.normal,
     color: MyTaskThemeColor.lightBlue,
   );
 
+  static TextStyle SubjectText= const TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 16,
+  );
 }

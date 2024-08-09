@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 50, // Adjusted spacing as needed
             ),
-            const TextButtonWidget(
+            TextButtonWidget(
               text: "LOG IN",
             ),
             const Spacer(),
