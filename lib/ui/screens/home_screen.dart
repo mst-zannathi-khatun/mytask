@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../widgets/tasklistwidget.dart';
+import 'createtask_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -22,7 +23,9 @@ class _HomeScreenState extends State<HomeScreen> {
             }),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> const CreateTaskScreen()));
+        },
         child: const Icon(
           Icons.add_box_outlined,
           color: Colors.black,
